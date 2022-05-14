@@ -6,15 +6,55 @@
 //
 
 import UIKit
+import SQLite3
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    //宣告資料庫連線指標
+    fileprivate var db:OpaquePointer?
+    //提供其他頁面取得資料庫連線的方法
+    func getDB() -> OpaquePointer
+    {
+        return db!
+    }
 
-
-
+    //應用程式啟動完成時
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //取得應用程式正在使用的檔案管理員
+        let filemanager =  FileManager.default
+        
+        let sourceDB = Bundle.main.path(forResource: "xbraindatabase", ofType: "db3")!
+        print("資料庫來源路徑：\(sourceDB)")
+        print("App的家目錄：\(NSHomeDirectory())")
+        //定義資料庫存放的目的地路徑在App的家目錄的Documents資料夾中，重新命名為mydb.db3
+        let destinationDB = NSHomeDirectory() + "/Documents/xbraindb.db3"
+        //當目的地資料庫檔案不存在時
+        if !filemanager.fileExists(atPath: destinationDB)
+        {
+            //從來源資料庫將檔案複製進目的地資料庫
+            try! filemanager.copyItem(atPath: sourceDB, toPath: destinationDB)
+        }
+        //開啟資料庫連線，並且存入db所在記憶體位置
+        if sqlite3_open(destinationDB, &db) == SQLITE_OK
+        {
+            print("資料庫連線成功！！！")
+        }
+        else
+        {
+            print("資料庫連線失敗！！！")
+        }
+        
         return true
+    }
+    
+    //應用程式終止時
+    func applicationWillTerminate(_ application: UIApplication)
+    {
+        print("應用程式終止！")
+        //關閉資料庫連線
+        sqlite3_close_v2(db)
     }
 
     // MARK: UISceneSession Lifecycle

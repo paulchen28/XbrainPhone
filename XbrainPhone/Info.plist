@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>同意Xbrain使用您的麥克風才能繼續此功能</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>同意Xbrain使用您的語音才能繼續此功能</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>同意Xbrain使用您的相簿才能繼續此功能</string>
+	<key>NSCameraUsageDescription</key>
+	<string>同意Xbrain使用您的相機才能繼續此功能</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

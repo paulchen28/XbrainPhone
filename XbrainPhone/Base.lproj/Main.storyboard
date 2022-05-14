@@ -1,24 +1,746 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ucE-NW-Qgy">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_02" translatesAutoresizingMaskIntoConstraints="NO" id="IKw-IE-4LQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7L-mG-aNO" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="75" y="262" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Camera" imageContentMode="scaleAspectFill"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="cO7-ah-Mca" kind="show" id="nss-ld-kWr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVI-PQ-lzS" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="75" y="397" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Mic" imageContentMode="scaleAspectFill"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uBj-ub-hby" kind="show" id="Iz8-bt-fLT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3h-35-Ffb" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="75" y="527" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Copy" imageContentMode="scaleAspectFill"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="JS6-WL-Wu2" kind="show" id="Jyl-pe-4lo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-cF-xg4" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="75" y="663" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Calendar" imageContentMode="scaleAspectFill"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="IEh-We-O9u" kind="show" id="IEa-tI-Vhn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請選擇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYK-2H-0Y5">
+                                <rect key="frame" x="80" y="88" width="91" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="紀錄方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQO-1b-Sd7">
+                                <rect key="frame" x="64" y="132" width="122" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IKw-IE-4LQ" secondAttribute="bottom" id="Fd3-kr-H6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="IKw-IE-4LQ" secondAttribute="trailing" id="RZt-Cf-HhL"/>
+                            <constraint firstItem="IKw-IE-4LQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iW8-2v-umr"/>
+                            <constraint firstItem="IKw-IE-4LQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jqy-d6-BjN"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="v0x-3N-yTC"/>
+                    <connections>
+                        <outlet property="Background" destination="IKw-IE-4LQ" id="tfK-4v-Syn"/>
+                        <outlet property="Calendar" destination="bOg-cF-xg4" id="PxG-SA-MqF"/>
+                        <outlet property="Camera" destination="A7L-mG-aNO" id="jl0-0c-439"/>
+                        <outlet property="Copy" destination="e3h-35-Ffb" id="h08-CW-nvp"/>
+                        <outlet property="Inform1" destination="HYK-2H-0Y5" id="fiX-5m-NCk"/>
+                        <outlet property="Inform2" destination="JQO-1b-Sd7" id="m9w-1A-DfL"/>
+                        <outlet property="Mic" destination="QVI-PQ-lzS" id="9WX-6Z-xkd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1267" y="117"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="WRj-dP-b8w">
+            <objects>
+                <viewController id="JS6-WL-Wu2" customClass="TextViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Omc-Fd-fYf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_05" translatesAutoresizingMaskIntoConstraints="NO" id="L2U-Jl-ZdH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請貼上文字或使用語音輸入記錄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82g-yt-yPX">
+                                <rect key="frame" x="22" y="340" width="370" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.40449792150000002" green="0.040207047019999997" blue="0.044483996929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dzL-0v-PDN">
+                                <rect key="frame" x="22" y="88" width="370" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT9-7U-GLy" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="660" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="ReEnter"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reEnter:" destination="JS6-WL-Wu2" eventType="touchUpInside" id="MpI-DX-QWg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzQ-iY-O73" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="730" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Record"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="text_save:" destination="JS6-WL-Wu2" eventType="touchUpInside" id="abh-CR-UWv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vy-hC-p1v" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="420" width="300" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Voice"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="voice_button:" destination="JS6-WL-Wu2" eventType="touchUpInside" id="kYo-2S-8M3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zDO-3F-xox"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="L2U-Jl-ZdH" secondAttribute="bottom" id="6nG-SP-ZqG"/>
+                            <constraint firstItem="L2U-Jl-ZdH" firstAttribute="leading" secondItem="Omc-Fd-fYf" secondAttribute="leading" id="XVx-S4-zgh"/>
+                            <constraint firstItem="L2U-Jl-ZdH" firstAttribute="top" secondItem="Omc-Fd-fYf" secondAttribute="top" id="r4a-MP-4r2"/>
+                            <constraint firstAttribute="trailing" secondItem="L2U-Jl-ZdH" secondAttribute="trailing" id="sSi-cB-pXZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0PE-R7-Wg4"/>
+                    <connections>
+                        <outlet property="TextView_speech" destination="dzL-0v-PDN" id="6H4-PN-6N2"/>
+                        <outlet property="btn_start" destination="9Vy-hC-p1v" id="gLy-l4-yh4"/>
+                        <outlet property="text_show" destination="82g-yt-yPX" id="IRM-eG-AQC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7G1-9M-hNp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2861" y="425"/>
+        </scene>
+        <!--File View Controller-->
+        <scene sceneID="ZZj-bE-dmG">
+            <objects>
+                <viewController id="dVg-0n-jja" customClass="FileViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ckp-7C-iRv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_06" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-Zn-xgD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuB-YU-wTB" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="87" y="88" width="240" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="PhotoFile"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="bPc-Tz-UKZ" kind="show" id="wuf-w9-Hyu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-fg-Y9c" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="87" y="340" width="240" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="AudioFile"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Orr-V4-lwU" kind="show" id="9gF-Q6-UN1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MR-X6-pc4" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="87" y="580" width="240" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="TextFile"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="I2q-Mu-bSk" kind="show" id="5cf-fM-hYw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kWX-jO-y40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0cK-Zn-xgD" firstAttribute="leading" secondItem="Ckp-7C-iRv" secondAttribute="leading" id="3jo-wr-n0t"/>
+                            <constraint firstAttribute="trailing" secondItem="0cK-Zn-xgD" secondAttribute="trailing" id="EOr-jv-POB"/>
+                            <constraint firstAttribute="bottom" secondItem="0cK-Zn-xgD" secondAttribute="bottom" id="lsp-7J-yGA"/>
+                            <constraint firstItem="0cK-Zn-xgD" firstAttribute="top" secondItem="Ckp-7C-iRv" secondAttribute="top" id="mZS-fH-7Du"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nIv-FB-S65"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZcD-Ln-d4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1267" y="1612"/>
+        </scene>
+        <!--Text File Table View Controller-->
+        <scene sceneID="e71-Fw-ZQe">
+            <objects>
+                <tableViewController id="I2q-Mu-bSk" customClass="TextFileTableViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CDs-37-d40">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" id="Mf4-BO-fOi">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mf4-BO-fOi" id="f5J-TO-wM9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="I2q-Mu-bSk" id="hI4-OQ-H8Y"/>
+                            <outlet property="delegate" destination="I2q-Mu-bSk" id="6Oq-69-QOq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="iRe-T7-GAb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ktv-Tl-j6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1267" y="2338"/>
+        </scene>
+        <!--Audio File Table View Controller-->
+        <scene sceneID="Zfx-7d-EaG">
+            <objects>
+                <tableViewController id="Orr-V4-lwU" customClass="AudioFileTableViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bz8-jK-zn0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AudioCell" id="Wnq-o9-Sqt">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wnq-o9-Sqt" id="sWV-Ou-isP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Orr-V4-lwU" id="3WC-pB-A8W"/>
+                            <outlet property="delegate" destination="Orr-V4-lwU" id="ew5-Kb-0lm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4aD-Yl-IYQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83R-S7-f58" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="1997"/>
+        </scene>
+        <!--Photo File Table View Controller-->
+        <scene sceneID="ie1-Rh-Kxa">
+            <objects>
+                <tableViewController id="bPc-Tz-UKZ" customClass="PhotoFileTableViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Kb7-cE-CrP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" id="SJa-v6-JJz">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SJa-v6-JJz" id="yYR-LB-J92">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="QFy-1j-23R" kind="show" id="wD6-tD-TpS"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bPc-Tz-UKZ" id="c56-8b-LqP"/>
+                            <outlet property="delegate" destination="bPc-Tz-UKZ" id="kbr-PI-5E8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="lRv-6g-MCs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ms6-hw-eCS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="1294"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="15q-ZY-Q5m">
+            <objects>
+                <viewController id="QFy-1j-23R" customClass="PhotoDetailViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eMu-BM-ZhH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TYS-rK-ZIm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fbJ-tR-HtT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AvK-Zv-HZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2861" y="1294"/>
+        </scene>
+        <!--Setup View Controller-->
+        <scene sceneID="CwW-4h-jYh">
+            <objects>
+                <viewController id="TQy-ek-wPO" customClass="SetupViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8sm-mp-CRB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="切換右手為慣用手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVW-QH-LVg">
+                                <rect key="frame" x="32" y="140" width="195" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="開關開啟為右手使用，開關關閉為左手使用。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igT-Hn-R5f">
+                                <rect key="frame" x="32" y="191" width="367" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U8c-D3-Df2">
+                                <rect key="frame" x="328" y="139" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="DominantHand:" destination="TQy-ek-wPO" eventType="valueChanged" id="7gr-pz-A03"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dLJ-Pw-DdL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A0a-g0-37e"/>
+                    <connections>
+                        <segue destination="c1u-IM-hJT" kind="show" id="l9W-TQ-tlf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wy-Mo-tmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1267" y="3100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ItM-et-cim">
+            <objects>
+                <viewController id="c1u-IM-hJT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iHW-rN-xgS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c8O-hR-33a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tKP-Rw-u06"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8y-c5-MH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013" y="3100"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="E18-Te-uv5">
+            <objects>
+                <viewController id="IEh-We-O9u" customClass="CalendarViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Phf-0x-9mI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2_Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="bPG-AD-d3c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="myn-KL-C3r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bPG-AD-d3c" secondAttribute="trailing" id="57s-fJ-Ohb"/>
+                            <constraint firstItem="bPG-AD-d3c" firstAttribute="top" secondItem="Phf-0x-9mI" secondAttribute="top" id="E0v-Rd-RvV"/>
+                            <constraint firstItem="bPG-AD-d3c" firstAttribute="leading" secondItem="Phf-0x-9mI" secondAttribute="leading" id="Ljj-JH-py3"/>
+                            <constraint firstAttribute="bottom" secondItem="bPG-AD-d3c" secondAttribute="bottom" id="bvE-AD-KyT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b3t-OW-PSw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDa-j6-9zw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="563"/>
+        </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="JHn-1F-Kz0">
+            <objects>
+                <viewController id="uBj-ub-hby" customClass="AudioViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pE5-Ek-gZE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_05" translatesAutoresizingMaskIntoConstraints="NO" id="Vnh-1w-J1S">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請按下方錄音鍵開始記錄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhE-Ou-buY">
+                                <rect key="frame" x="22" y="340" width="370" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.40449792150000002" green="0.040207047019999997" blue="0.044483996929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEu-MR-5Ob" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="420" width="300" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Recording"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recording_button:" destination="uBj-ub-hby" eventType="touchUpInside" id="FDs-ya-srS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crN-5j-bKo" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="660" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="ReRecord"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reRecord:" destination="uBj-ub-hby" eventType="touchUpInside" id="Wwr-lO-3E8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdW-ZO-U14" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="730" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Record"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="audio_save:" destination="uBj-ub-hby" eventType="touchUpInside" id="f3N-bS-x6W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIk-dk-LOJ" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="500" width="300" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Stop"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCc-od-kBC" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="580" width="300" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Play"/>
+                                </buttonConfiguration>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xFq-RQ-IU5">
+                                <rect key="frame" x="22" y="88" width="370" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5u5-yM-bCc">
+                                <rect key="frame" x="20" y="302" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-uz-mud">
+                                <rect key="frame" x="350" y="335" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qp1-Rc-IVc">
+                                <rect key="frame" x="22" y="335" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vqx-t2-gbh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Vnh-1w-J1S" secondAttribute="bottom" id="L6M-Lg-hGX"/>
+                            <constraint firstAttribute="trailing" secondItem="Vnh-1w-J1S" secondAttribute="trailing" id="LPj-RH-mgD"/>
+                            <constraint firstItem="Vnh-1w-J1S" firstAttribute="leading" secondItem="pE5-Ek-gZE" secondAttribute="leading" id="YoC-XE-wts"/>
+                            <constraint firstItem="Vnh-1w-J1S" firstAttribute="top" secondItem="pE5-Ek-gZE" secondAttribute="top" id="pTf-ZO-KUe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jcW-gO-Z64"/>
+                    <connections>
+                        <outlet property="Audio_speech" destination="xFq-RQ-IU5" id="uHB-FG-ZTe"/>
+                        <outlet property="audio_show" destination="qhE-Ou-buY" id="0NQ-JI-gE8"/>
+                        <outlet property="btn_start" destination="jEu-MR-5Ob" id="NiR-l2-cwd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjf-y0-Jna" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2860.8695652173915" y="-237.05357142857142"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="TOp-YY-eVh">
+            <objects>
+                <viewController id="cO7-ah-Mca" customClass="CameraViewController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybA-pO-02W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_05" translatesAutoresizingMaskIntoConstraints="NO" id="7lv-M0-7np">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTe-mI-9Kn" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="420" width="300" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Photograph"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Photograph:" destination="cO7-ah-Mca" eventType="touchUpInside" id="Bwo-2l-JN0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwo-hR-xel" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="660" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="ReShoot"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Reshoot:" destination="cO7-ah-Mca" eventType="touchUpInside" id="x5O-TO-OxC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP2-ZN-ZBk" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="730" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Record"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="CameraSave:" destination="cO7-ah-Mca" eventType="touchUpInside" id="5Mx-qt-wRB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請按下方拍照鍵或錄影鍵開始記錄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6M-mM-HM8">
+                                <rect key="frame" x="22" y="340" width="370" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.40449792150000002" green="0.040207047019999997" blue="0.044483996929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzH-8m-Vww" customClass="ImageButton" customModule="XbrainPhone" customModuleProvider="target">
+                                <rect key="frame" x="57" y="500" width="300" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Video"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8E-0A-ubM">
+                                <rect key="frame" x="22" y="88" width="370" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4XB-gW-Abb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7lv-M0-7np" secondAttribute="bottom" id="5Fx-bF-Dym"/>
+                            <constraint firstAttribute="trailing" secondItem="7lv-M0-7np" secondAttribute="trailing" id="I6c-Hb-92X"/>
+                            <constraint firstItem="7lv-M0-7np" firstAttribute="leading" secondItem="ybA-pO-02W" secondAttribute="leading" id="mry-jW-iOH"/>
+                            <constraint firstItem="7lv-M0-7np" firstAttribute="top" secondItem="ybA-pO-02W" secondAttribute="top" id="slX-OV-ZxS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="k23-fv-Uxl"/>
+                    <connections>
+                        <outlet property="camera_show" destination="n6M-mM-HM8" id="gTG-hL-qoo"/>
+                        <outlet property="input_picture" destination="T8E-0A-ubM" id="Sa9-27-axj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsf-lF-L8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011.594202898551" y="-307.36607142857139"/>
+        </scene>
+        <!--紀錄-->
+        <scene sceneID="Y5C-av-wml">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V49-c1-qxz" customClass="MainNavigationController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="紀錄" image="IconX_02" id="iob-hg-Pro"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZYU-7U-CcZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.40449792150000002" green="0.040207047019999997" blue="0.044483996929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L0W-rz-hVg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cru-eU-Oxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315.94202898550725" y="116.51785714285714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="p2L-Gu-KR8">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ucE-NW-Qgy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mU-a7-1ub">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.78253266480000006" green="0.93698388340000005" blue="0.91568852730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="V49-c1-qxz" kind="relationship" relationship="viewControllers" id="XBI-5v-H5u"/>
+                        <segue destination="poR-eY-zwM" kind="relationship" relationship="viewControllers" id="hCq-MK-8xb"/>
+                        <segue destination="cWh-Uh-bDT" kind="relationship" relationship="viewControllers" id="B7k-CR-kgr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaI-JA-1dt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594.20289855072474" y="116.51785714285714"/>
+        </scene>
+        <!--檔案-->
+        <scene sceneID="hMR-u6-Qoo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="poR-eY-zwM" customClass="FileNavigationController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="檔案" image="IconFile" id="vNO-QA-ks0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YOQ-t9-dyT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dVg-0n-jja" kind="relationship" relationship="rootViewController" id="DpB-bI-CZc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSK-Me-9cP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="1612"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="xvI-OL-s1e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cWh-Uh-bDT" customClass="SetupNavigationController" customModule="XbrainPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="設定" image="IconSetUp" id="c3n-HF-r2t"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bfp-FM-SPi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TQy-ek-wPO" kind="relationship" relationship="rootViewController" id="ii5-EU-9bw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLe-Mi-PBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="3100"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AudioFile" width="426.66665649414062" height="277.33334350585938"/>
+        <image name="Calendar" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="Camera" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="Copy" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="IconFile" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="IconSetUp" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="IconX_02" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="Mic" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="PhotoFile" width="426.66665649414062" height="277.33334350585938"/>
+        <image name="Photograph" width="400" height="133.33332824707031"/>
+        <image name="Play" width="400" height="133.33332824707031"/>
+        <image name="ReEnter" width="400" height="133.33332824707031"/>
+        <image name="ReRecord" width="400" height="133.33332824707031"/>
+        <image name="ReShoot" width="400" height="133.33332824707031"/>
+        <image name="Record" width="400" height="133.33332824707031"/>
+        <image name="Recording" width="400" height="133.33332824707031"/>
+        <image name="Stop" width="400" height="133.33332824707031"/>
+        <image name="TextFile" width="426.66665649414062" height="277.33334350585938"/>
+        <image name="Video" width="400" height="133.33332824707031"/>
+        <image name="Voice" width="400" height="133.33332824707031"/>
+        <image name="bg2_Calendar" width="1474.3333740234375" height="2211.333251953125"/>
+        <image name="bg_02" width="1181" height="1771.6666259765625"/>
+        <image name="bg_05" width="1821.3333740234375" height="1214.3333740234375"/>
+        <image name="bg_06" width="1181" height="1771.6666259765625"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

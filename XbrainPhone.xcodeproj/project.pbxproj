@@ -7,15 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D18C160276C80A000CD80B3 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18C15F276C80A000CD80B3 /* CameraViewController.swift */; };
+		9D18C162276C80FC00CD80B3 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18C161276C80FC00CD80B3 /* AudioViewController.swift */; };
+		9D18C166276C828F00CD80B3 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18C165276C828F00CD80B3 /* TextViewController.swift */; };
+		9D18C168276C82CB00CD80B3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18C167276C82CB00CD80B3 /* CalendarViewController.swift */; };
+		9D3F1A4B2774EFC300DF5D6E /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A4A2774EFC300DF5D6E /* SetupViewController.swift */; };
+		9D3F1A4D2774F14B00DF5D6E /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A4C2774F14B00DF5D6E /* FileViewController.swift */; };
+		9D3F1A4F27750BB000DF5D6E /* PhotoFileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A4E27750BB000DF5D6E /* PhotoFileTableViewController.swift */; };
+		9D3F1A5127750BC900DF5D6E /* AudioFileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A5027750BC900DF5D6E /* AudioFileTableViewController.swift */; };
+		9D3F1A5327750BDE00DF5D6E /* TextFileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A5227750BDE00DF5D6E /* TextFileTableViewController.swift */; };
+		9D3F1A5527751AC200DF5D6E /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A5427751AC200DF5D6E /* PhotoDetailViewController.swift */; };
+		9D3F1A5727752FED00DF5D6E /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A5627752FED00DF5D6E /* MainNavigationController.swift */; };
+		9D3F1A592775302600DF5D6E /* FileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A582775302600DF5D6E /* FileNavigationController.swift */; };
+		9D3F1A5B2775306400DF5D6E /* SetupNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F1A5A2775306400DF5D6E /* SetupNavigationController.swift */; };
 		9DC737AA275FDE90001555AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC737A9275FDE90001555AE /* AppDelegate.swift */; };
 		9DC737AC275FDE90001555AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC737AB275FDE90001555AE /* SceneDelegate.swift */; };
 		9DC737AE275FDE90001555AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC737AD275FDE90001555AE /* ViewController.swift */; };
 		9DC737B1275FDE90001555AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC737AF275FDE90001555AE /* Main.storyboard */; };
 		9DC737B3275FDE91001555AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC737B2275FDE91001555AE /* Assets.xcassets */; };
 		9DC737B6275FDE91001555AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC737B4275FDE91001555AE /* LaunchScreen.storyboard */; };
+		9DD9046D277434EB00D3AF5A /* xbraindatabase.db3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DD9046C277434EB00D3AF5A /* xbraindatabase.db3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D18C15F276C80A000CD80B3 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		9D18C161276C80FC00CD80B3 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		9D18C165276C828F00CD80B3 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		9D18C167276C82CB00CD80B3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		9D3F1A4A2774EFC300DF5D6E /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		9D3F1A4C2774F14B00DF5D6E /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		9D3F1A4E27750BB000DF5D6E /* PhotoFileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFileTableViewController.swift; sourceTree = "<group>"; };
+		9D3F1A5027750BC900DF5D6E /* AudioFileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileTableViewController.swift; sourceTree = "<group>"; };
+		9D3F1A5227750BDE00DF5D6E /* TextFileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFileTableViewController.swift; sourceTree = "<group>"; };
+		9D3F1A5427751AC200DF5D6E /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		9D3F1A5627752FED00DF5D6E /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		9D3F1A582775302600DF5D6E /* FileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNavigationController.swift; sourceTree = "<group>"; };
+		9D3F1A5A2775306400DF5D6E /* SetupNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupNavigationController.swift; sourceTree = "<group>"; };
 		9DC737A6275FDE8F001555AE /* XbrainPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XbrainPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC737A9275FDE90001555AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC737AB275FDE90001555AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +51,7 @@
 		9DC737B2275FDE91001555AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DC737B5275FDE91001555AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DC737B7275FDE91001555AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD9046C277434EB00D3AF5A /* xbraindatabase.db3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbraindatabase.db3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +84,27 @@
 		9DC737A8275FDE90001555AE /* XbrainPhone */ = {
 			isa = PBXGroup;
 			children = (
+				9DD9046C277434EB00D3AF5A /* xbraindatabase.db3 */,
 				9DC737A9275FDE90001555AE /* AppDelegate.swift */,
 				9DC737AB275FDE90001555AE /* SceneDelegate.swift */,
 				9DC737AD275FDE90001555AE /* ViewController.swift */,
+				9D18C15F276C80A000CD80B3 /* CameraViewController.swift */,
+				9D18C161276C80FC00CD80B3 /* AudioViewController.swift */,
+				9D18C165276C828F00CD80B3 /* TextViewController.swift */,
+				9D18C167276C82CB00CD80B3 /* CalendarViewController.swift */,
+				9D3F1A4C2774F14B00DF5D6E /* FileViewController.swift */,
+				9D3F1A4A2774EFC300DF5D6E /* SetupViewController.swift */,
+				9D3F1A4E27750BB000DF5D6E /* PhotoFileTableViewController.swift */,
+				9D3F1A5427751AC200DF5D6E /* PhotoDetailViewController.swift */,
+				9D3F1A5027750BC900DF5D6E /* AudioFileTableViewController.swift */,
+				9D3F1A5227750BDE00DF5D6E /* TextFileTableViewController.swift */,
 				9DC737AF275FDE90001555AE /* Main.storyboard */,
 				9DC737B2275FDE91001555AE /* Assets.xcassets */,
 				9DC737B4275FDE91001555AE /* LaunchScreen.storyboard */,
 				9DC737B7275FDE91001555AE /* Info.plist */,
+				9D3F1A5627752FED00DF5D6E /* MainNavigationController.swift */,
+				9D3F1A582775302600DF5D6E /* FileNavigationController.swift */,
+				9D3F1A5A2775306400DF5D6E /* SetupNavigationController.swift */,
 			);
 			path = XbrainPhone;
 			sourceTree = "<group>";
@@ -127,6 +169,7 @@
 			files = (
 				9DC737B6275FDE91001555AE /* LaunchScreen.storyboard in Resources */,
 				9DC737B3275FDE91001555AE /* Assets.xcassets in Resources */,
+				9DD9046D277434EB00D3AF5A /* xbraindatabase.db3 in Resources */,
 				9DC737B1275FDE90001555AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +181,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3F1A4D2774F14B00DF5D6E /* FileViewController.swift in Sources */,
 				9DC737AE275FDE90001555AE /* ViewController.swift in Sources */,
+				9D18C160276C80A000CD80B3 /* CameraViewController.swift in Sources */,
 				9DC737AA275FDE90001555AE /* AppDelegate.swift in Sources */,
+				9D3F1A5727752FED00DF5D6E /* MainNavigationController.swift in Sources */,
+				9D3F1A5327750BDE00DF5D6E /* TextFileTableViewController.swift in Sources */,
+				9D3F1A5527751AC200DF5D6E /* PhotoDetailViewController.swift in Sources */,
 				9DC737AC275FDE90001555AE /* SceneDelegate.swift in Sources */,
+				9D3F1A4B2774EFC300DF5D6E /* SetupViewController.swift in Sources */,
+				9D3F1A592775302600DF5D6E /* FileNavigationController.swift in Sources */,
+				9D3F1A4F27750BB000DF5D6E /* PhotoFileTableViewController.swift in Sources */,
+				9D18C162276C80FC00CD80B3 /* AudioViewController.swift in Sources */,
+				9D18C168276C82CB00CD80B3 /* CalendarViewController.swift in Sources */,
+				9D3F1A5127750BC900DF5D6E /* AudioFileTableViewController.swift in Sources */,
+				9D18C166276C828F00CD80B3 /* TextViewController.swift in Sources */,
+				9D3F1A5B2775306400DF5D6E /* SetupNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
